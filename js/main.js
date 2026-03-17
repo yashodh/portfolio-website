@@ -11,13 +11,17 @@ function switchTab(targetId) {
   if (!newPanel || currentPanel === newPanel) return;
 
   // Update buttons and heading
+  const dropdownLabel = document.querySelector('.dropdown-label');
+  const dropdownItems = document.querySelectorAll('.dropdown-item');
   tabBtns.forEach(btn => {
     btn.classList.toggle('active', btn.dataset.tab === targetId);
     btn.setAttribute('aria-selected', btn.dataset.tab === targetId);
     if (btn.dataset.tab === targetId && contentHeading) {
       contentHeading.textContent = btn.textContent;
+      if (dropdownLabel) dropdownLabel.textContent = btn.textContent;
     }
   });
+  dropdownItems.forEach(item => item.classList.toggle('active', item.dataset.tab === targetId));
 
   // Crossfade: fade out current, then swap, then fade in new
   currentPanel.style.opacity = '0';
@@ -123,6 +127,35 @@ function initCarousels() {
 }
 
 /* ===========================================
+   MOBILE DROPDOWN
+   =========================================== */
+function initMobileDropdown() {
+  const dropdown = document.getElementById('mobile-tab-dropdown');
+  const trigger = document.getElementById('dropdown-trigger');
+  const menu = document.getElementById('dropdown-menu');
+  if (!dropdown || !trigger || !menu) return;
+
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = dropdown.classList.toggle('open');
+    trigger.setAttribute('aria-expanded', isOpen);
+  });
+
+  menu.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', () => {
+      switchTab(item.dataset.tab);
+      dropdown.classList.remove('open');
+      trigger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('click', () => {
+    dropdown.classList.remove('open');
+    trigger.setAttribute('aria-expanded', 'false');
+  });
+}
+
+/* ===========================================
    INIT ON LOAD
    =========================================== */
 document.addEventListener('DOMContentLoaded', () => {
@@ -132,4 +165,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   initCarousels();
   initVideoPlayers();
+  initMobileDropdown();
 });
