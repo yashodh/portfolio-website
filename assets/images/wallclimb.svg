@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <defs>
+    <pattern id="wc-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0L0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="540" fill="#0d0d0d"/>
+  <rect width="960" height="540" fill="url(#wc-grid)" opacity="0.1"/>
+
+  <!-- Wall surface (right half) -->
+  <rect x="555" y="0" width="405" height="540" fill="rgba(255,255,255,0.02)"/>
+  <rect x="555" y="0" width="6" height="540" fill="rgba(255,255,255,0.14)"/>
+
+  <!-- Wall horizontal cracks -->
+  <line x1="555" y1="108" x2="960" y2="108" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <line x1="555" y1="216" x2="960" y2="216" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <line x1="555" y1="324" x2="960" y2="324" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <line x1="555" y1="432" x2="960" y2="432" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <!-- Vertical subdivision -->
+  <line x1="757" y1="0" x2="757" y2="540" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+  <!-- Motion lines (upward trail) -->
+  <line x1="482" y1="350" x2="482" y2="430" stroke="rgba(59,130,246,0.28)" stroke-width="2" stroke-dasharray="7,9"/>
+  <line x1="502" y1="360" x2="502" y2="440" stroke="rgba(59,130,246,0.18)" stroke-width="2" stroke-dasharray="7,9"/>
+  <line x1="462" y1="355" x2="462" y2="435" stroke="rgba(59,130,246,0.18)" stroke-width="2" stroke-dasharray="7,9"/>
+
+  <!-- Climbing figure -->
+  <!-- Head -->
+  <circle cx="486" cy="162" r="27" fill="#3b82f6" opacity="0.85"/>
+  <!-- Body (upright, against wall) -->
+  <rect x="470" y="187" width="34" height="68" rx="11" fill="#3b82f6" opacity="0.85"/>
+  <!-- Right arm (reaching high to wall) -->
+  <path d="M502 198 Q534 170 558 160" stroke="#3b82f6" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.85"/>
+  <!-- Left arm (lower grip) -->
+  <path d="M472 216 Q515 222 558 228" stroke="#3b82f6" stroke-width="13" stroke-linecap="round" fill="none" opacity="0.85"/>
+  <!-- Right leg (bent, foot on wall) -->
+  <path d="M498 252 Q532 272 558 282" stroke="#3b82f6" stroke-width="17" stroke-linecap="round" fill="none" opacity="0.85"/>
+  <!-- Left leg (extended down) -->
+  <path d="M476 254 Q472 305 470 348" stroke="#3b82f6" stroke-width="17" stroke-linecap="round" fill="none" opacity="0.85"/>
+
+  <!-- Label -->
+  <text x="480" y="512" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="500" letter-spacing="6" fill="rgba(255,255,255,0.22)">WALLCLIMB</text>
+</svg>

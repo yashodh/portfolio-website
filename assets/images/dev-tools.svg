@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <rect width="960" height="540" fill="#111111"/>
+  <rect width="960" height="540" fill="url(#grid)" opacity="0.15"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <text
+    x="480"
+    y="300"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="140"
+    font-weight="800"
+    letter-spacing="24"
+    fill="#e63946">NDA</text>
+  <text
+    x="480"
+    y="390"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="22"
+    font-weight="400"
+    letter-spacing="6"
+    fill="rgba(255,255,255,0.3)">VISUALS RESTRICTED</text>
+</svg>

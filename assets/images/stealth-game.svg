@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <defs>
+    <pattern id="sg-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0L0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5"/>
+    </pattern>
+    <radialGradient id="sg-spot" cx="88%" cy="8%" r="75%">
+      <stop offset="0%" stop-color="#ffe066" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffe066" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="540" fill="#0d0d0d"/>
+  <rect width="960" height="540" fill="url(#sg-grid)" opacity="0.1"/>
+
+  <!-- Spotlight cone from upper right -->
+  <polygon points="840,0 960,0 960,540 360,540" fill="url(#sg-spot)"/>
+  <line x1="840" y1="0" x2="360" y2="540" stroke="rgba(255,220,80,0.06)" stroke-width="2"/>
+
+  <!-- Crouching figure (in shadow, left of spotlight) -->
+  <!-- Head -->
+  <circle cx="290" cy="210" r="27" fill="#3b82f6" opacity="0.82"/>
+  <!-- Torso (leaning forward) -->
+  <path d="M268 235 Q270 285 268 300 L315 298 Q318 282 312 235 Z" fill="#3b82f6" opacity="0.82" transform="rotate(-12,290,267)"/>
+  <!-- Left arm (reaching forward low) -->
+  <path d="M270 255 Q238 268 205 260" stroke="#3b82f6" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.82"/>
+  <!-- Right arm (tucked back) -->
+  <path d="M312 252 Q336 260 350 255" stroke="#3b82f6" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.82"/>
+  <!-- Left leg (bent knee) -->
+  <path d="M272 295 Q252 330 238 362" stroke="#3b82f6" stroke-width="17" stroke-linecap="round" fill="none" opacity="0.82"/>
+  <!-- Right leg (bearing weight) -->
+  <path d="M308 295 Q318 332 324 364" stroke="#3b82f6" stroke-width="17" stroke-linecap="round" fill="none" opacity="0.82"/>
+  <!-- Ground shadow -->
+  <ellipse cx="282" cy="372" rx="58" ry="10" fill="#000000" opacity="0.55"/>
+
+  <!-- Label -->
+  <text x="480" y="512" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="500" letter-spacing="6" fill="rgba(255,255,255,0.22)">STEALTH GAME</text>
+</svg>
