@@ -1021,7 +1021,7 @@ ul {
   .tab-btn.active { border-left-color: transparent; border-bottom-color: var(--accent); background: none; }
   .main-content { padding: 32px 16px 60px; }
   .skills-grid, .edu-grid, .role-stack { grid-template-columns: 1fr; }
-  .projects-grid { grid-template-columns: 1fr 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
   .edu-header, .role-header, .company-header { flex-direction: column; gap: 4px; }
   .role-block { padding: 20px 18px; }
   .project-body { padding: 20px 18px; }
